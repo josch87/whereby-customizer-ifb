@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Whereby: Customizer
 @namespace      web.aljoschazoeller.com
-@version        1.0.1
+@version        1.0.2
 @license        unlicense
 @updateURL      https://src.aljoschazoeller.com/usercss/whereby/customizer.user.css
 @description    A UserCSS to customize Whereby on your own
@@ -55,6 +55,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.0.2] - 2020-08-24
+###Fixed
+- Backround not visibe when room has custom Whereby-Branding
+
 ## [1.0.1] - 2020-08-10
 ### Fixed
 - Updated HTML class Attribute for background
@@ -87,5 +91,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
         background-size: var(--RoomsBgImgSize);
         background-repeat: var(--RoomsBgImgRepeat);
         background-position: var(--RoomsBgImgPosition);
+    }
+    
+    img.bgImg-3mp1 {
+        display: none !important;
     }
 }
