@@ -1,6 +1,6 @@
 # Whereby: Customizer IFB
 
-UserCSS for the video meeting platform "Whereby". Customizer special edition for the Berlin International Film Festival staff.
+A UserCSS to customize the video meeting platform "Whereby" on your own. Special edition for the Berlin International Film Festival staff.
 
 ## Installation
 A userstyle extension is required, common ones include:
