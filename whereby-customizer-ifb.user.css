@@ -13,9 +13,9 @@
 @var            color   RoomsBgColor  "Rooms: Background Color"  #006654
 @var            select  RoomsBgImg      "Rooms: Background Image" {
     "None":         "none",
-    "Pink Panther 1": "url(https://src.aljoschazoeller.com/usercss/whereby/customizer/panther001.png)",
-    "Pink Panther 2": "url(https://src.aljoschazoeller.com/usercss/whereby/customizer/panther002.png)",
-    "Berlinale Logo": "url(https://src.aljoschazoeller.com/usercss/whereby/customizer/berlinalelogo001.png)",
+    "Pink Panther 1": "url(https://src.aljoschazoeller.com/usercss/whereby/media/panther001.png)",
+    "Pink Panther 2": "url(https://src.aljoschazoeller.com/usercss/whereby/media/panther002.png)",
+    "Berlinale Logo": "url(https://src.aljoschazoeller.com/usercss/whereby/media/berlinalelogo001.png)",
     "Custom Image": "var(--RoomsCustomBgImg, none)"
 }
 @var            text    RoomsCustomBgImg    "Rooms: Custom Background Image; include url()"   "url(https://example.com/img.png)"
@@ -71,20 +71,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 @-moz-document domain("whereby.com") {
     /* Code for the whole domain */
-    
 }
-
 
 @-moz-document regexp("https*://.*whereby.com/(org|user).*") {
     /* Code for the Dashboard only */
-    
 }
-
 
 @-moz-document regexp("https*://.*whereby.com/(?!org|user).*") {
     /* Code for the rooms only */
     html,
-    .bgImg-317C, /*alt*/
+    .bgImg-317C,
+    /*alt*/
     .bgImg-3mp1 {
         background-color: var(--RoomsBgColor) !important;
         background-image: var(--RoomsBgImg);
@@ -92,7 +89,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
         background-repeat: var(--RoomsBgImgRepeat);
         background-position: var(--RoomsBgImgPosition);
     }
-    
     img.bgImg-3mp1 {
         display: none !important;
     }
