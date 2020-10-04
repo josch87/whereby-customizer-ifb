@@ -13,9 +13,9 @@
 @var            color   RoomsBgColor  "Rooms: Background Color"  #006654
 @var            select  RoomsBgImg      "Rooms: Background Image" {
     "None":         "none",
-    "Pink Panther 1": "url(media/panther001.png)",
-    "Pink Panther 2": "url(media/panther002.png)",
-    "Berlinale Logo": "url(media/berlinalelogo001.png)",
+    "Pink Panther 1": "url(https://src.aljoschazoeller.com/usercss/whereby-customizer-ifb/media/panther001.png)",
+    "Pink Panther 2": "url(https://src.aljoschazoeller.com/usercss/whereby-customizer-ifb/media/panther002.png)",
+    "Berlinale Logo": "url(https://src.aljoschazoeller.com/usercss/whereby-customizer-ifb/media/berlinalelogo001.png)",
     "Custom Image": "var(--RoomsCustomBgImg, none)"
 }
 @var            text    RoomsCustomBgImg    "Rooms: Custom Background Image; include url()"   "url(https://example.com/img.png)"
