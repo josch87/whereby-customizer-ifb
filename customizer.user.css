@@ -1,0 +1,86 @@
+/* ==UserStyle==
+@name           Whereby: Customizer
+@namespace      web.aljoschazoeller.com
+@version        1.0.0
+@license        unlicense
+@updateURL      https://src.aljoschazoeller.com/usercss/whereby/customizer.user.css
+@description    A UserCSS to customize Whereby on your own
+@author         </Aljoscha> <mail@aljoschazoeller.com> (https://web.aljoschazoeller.com)
+@homepageURL    https://web.aljoschazoeller.com/
+@supportURL     http://support.aljoschazoeller.com/
+
+@preprocessor   default
+@var            color   RoomsBgColor  "Rooms: Background Color"  #006654
+@var            select  RoomsBgImg      "Rooms: Background Image" {
+    "None":         "none",
+    "Pink Panther 1": "url(https://src.aljoschazoeller.com/usercss/whereby/customizer/panther001.png)",
+    "Pink Panther 2": "url(https://src.aljoschazoeller.com/usercss/whereby/customizer/panther002.png)",
+    "Berlinale Logo": "url(https://src.aljoschazoeller.com/usercss/whereby/customizer/berlinalelogo001.png)",
+    "Custom Image": "var(--RoomsCustomBgImg, none)"
+}
+@var            text    RoomsCustomBgImg    "Rooms: Custom Background Image; include url()"   "url(https://example.com/img.png)"
+@var            select  RoomsBgImgSize    "Rooms: Background Image Size" {
+    "Original Size": "auto",
+    "Width/Height": "var(--RoomsBgImgSizeWH)",
+    "Cover": "cover",
+    "Contain": "contain"
+}
+@var            text    RoomsBgImgSizeWH  "Rooms: Background Image Size Width/Height (px/%)" "50% auto"
+}"
+@var            select  RoomsBgImgRepeat "Rooms: Background Image Repeat" {
+    "No Repeat":            "no-repeat",
+    "Repeat":               "repeat",
+    "Repeat horizontally":  "repeat-x",
+    "Repeat vertically":    "repeat-y",
+    "Space":                "space",
+    "Round":                "round"
+}
+@var            select  RoomsBgImgPosition "Rooms: Background Image Position" {
+    "left top":         "left top",
+    "left center":      "left center",
+    "left bottom":      "left bottom",
+    "right top":        "right top",
+    "right center":     "right center",
+    "right bottom":     "right bottom",
+    "center top":       "center top",
+    "center center*":   "center center",
+    "center bottom":    "center bottom",
+    "custom":           "var(--RoomsBgImgPositionCustom)"
+}
+@var            text    RoomsBgImgPositionCustom    "Rooms: Background Image Position Custom (px/%)"   "10% 20%"
+
+# Changelog
+All notable changes to this project will be documented in this file.
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+## [1.0.0] - 2020-06-08
+### Added
+- Initial Release
+
+==/UserStyle== */
+
+@-moz-document domain("whereby.com") {
+    /* Code for the whole domain */
+    
+}
+
+
+@-moz-document regexp("https*://.*whereby.com/(org|user).*") {
+    /* Code for the Dashboard only */
+    
+}
+
+
+@-moz-document regexp("https*://.*whereby.com/(?!org|user).*") {
+    /* Code for the rooms only */
+    html,
+    .bgImg-317C {
+        background-color: var(--RoomsBgColor) !important;
+        background-image: var(--RoomsBgImg);
+        background-size: var(--RoomsBgImgSize);
+        background-repeat: var(--RoomsBgImgRepeat);
+        background-position: var(--RoomsBgImgPosition);
+    }
+}
